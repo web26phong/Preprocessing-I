@@ -59,13 +59,34 @@ html, body {
 
 html {
 	font-size: 62.5%;
-	background-color: @themeColor2;
+	font-size: 1rem;
+	background-color: @themeColor3;
+	h1 {
+		font-size: 2rem;
+		text-decoration: underline;
+	}
+	h2 {
+		font-size: 1.8rem;
+	}
+	h3 {
+		font-size: 1.6rem;
+	}
+	h4 {
+		font-size: 1.4rem;
+	}
+	h5 {
+		font-size: 1.2rem;
+	}
+	h6{
+		font-size: 1.1rem;
+	}
 }
 
 //start of variables
-@themeColor: rgb(233, 244, 255);
-@themeColor2: rgb(251, 255, 244);
-@themeColor3: #f4fcff;
+@themeColor: rgb(207, 218, 230);
+@themeColor2: rgb(253, 255, 249);
+@themeColor3: hsl(197, 100%, 97%);
+@themeColor4: rgb(251, 254, 255);
 //end variables section
 
 //start of mixins section
@@ -82,24 +103,49 @@ html {
 }
 
 .sectionBorder(){
-	border-top: solid black 1.5px;
-	border-left: solid black 1px;
-	border-right: solid black 1px;
+	border-top: outset @themeColor 1.5px;
+	border-left: outset @themeColor 1px;
+	border-right: outset @themeColor 1px;
 	border-radius: 10px;
 }
 
 .mainBorder(){
-	border: solid black 1px;
+	border: outset @themeColor 1px;
 }
 
 .bgRise(){
-	border: ridge @themeColor 1px;
+	border: outset @themeColor 1px;
 	background-color: @themeColor2;
 }
+
+.buttonStyle(){
+	.button{
+		text-decoration: none;
+		color: black;
+		background-color: @themeColor2;
+	}
+	.button:link{
+		border: outset @themeColor 2px;
+		border-radius: 8px;
+		padding: 2%;
+	}
+	.button:visited{
+		text-decoration: none;
+		border: outset @themeColor 2px;
+	}
+
+	.button:hover{
+		border: outset @themeColor 2px;
+		background-color: @themeColor4;
+	}
+	.button:active{
+		border: inset @themeColor 2px;
+	}
+}
+
 //end mixins section
 
 .mainContainer {
-	font-size: 1.6rem;
 	width: 900px;
 	margin: 0 auto;
 	display: block;
@@ -111,7 +157,7 @@ html {
 		justify-content: center;
 		flex-direction: row;
 		.headerMainTitle{
-			width: 29%;
+			width: 39%;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -119,17 +165,24 @@ html {
 		}//end .headerMainTitle
 
 		.navContainer{
-			width: 70%;
+			width: 60%;
 			display: flex;
 			justify-content: flex-end;
 			.navSection{
+				.buttonStyle();
 				width: 70%;
 				display: flex;
 				justify-content: space-evenly;
+				align-items: center;
 				text-decoration: none;
-				.skipNav{
-					display:none;
-				}//end .skipnav section. displays none for screen reader accessibility only
+				#skipNav{
+						position: absolute;
+						left:-10000px;
+						top: auto;
+						width: 1px;
+						height: 1px;
+						overflow: hidden;
+				}//end #skipnav... displays none for screen reader accessibility only
 			}//end .navSection
 
 		}//end .navContainer
@@ -137,12 +190,13 @@ html {
 	}//end .headerMain
 
 	.contentMain{
-		background-color: @themeColor3;
+		background-color: @themeColor4;
 		.pad();
 		.mainBorder();
 		display: flex;
 		flex-direction: column;
 		.educationMainSection{
+			background-color: @themeColor3;
 			.pad();
 			.sectionBorder();
 			.educationSchool{
@@ -153,21 +207,22 @@ html {
 		}//end .educationmainSection
 
 		.skillsMainSection{
-			display: none;
+			background-color: @themeColor3;
 			.sectionBorder();
-			// display: flex;
-			flex-direction: column;
+			.pad();
 			.skillsComputerApplications{
 				.pad();
+				.bgRise();
 			}//end .skillsComputerApplications
-
 			.skillsComputerLanguages{
 				.pad();
+				.bgRise();
 			}//end .skillsComputerLanguages
 
 		}//end .skillsMainSection
 
 		.workExperienceMainSection{
+			background-color: @themeColor3;
 			display: flex;
 			.pad();
 			.sectionBorder();
@@ -203,9 +258,10 @@ html {
 		}//end .workExperienceMainSection
 
 		.referencesMainSection{
+			background-color: @themeColor3;
 			.pad();
 			.sectionBorder();
-			border-bottom: solid black 1px;
+			border-bottom: solid @themeColor 1px;
 			.referencesPersonal{
 				.pad();
 				.bgRise();

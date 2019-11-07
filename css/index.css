@@ -136,31 +136,50 @@ body {
 }
 html {
   font-size: 62.5%;
-  background-color: #fbfff4;
+  font-size: 1rem;
+  background-color: hsl(197, 100%, 97%);
+}
+html h1 {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+html h2 {
+  font-size: 1.8rem;
+}
+html h3 {
+  font-size: 1.6rem;
+}
+html h4 {
+  font-size: 1.4rem;
+}
+html h5 {
+  font-size: 1.2rem;
+}
+html h6 {
+  font-size: 1.1rem;
 }
 .mainContainer {
-  font-size: 1.6rem;
   width: 900px;
   margin: 0 auto;
   display: block;
 }
 .mainContainer .headerMain {
-  background-color: #f4fcff;
-  border: solid black 1px;
+  background-color: hsl(197, 100%, 97%);
+  border: outset #cfdae6 1px;
   padding: 1%;
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
 .mainContainer .headerMain .headerMainTitle {
-  width: 29%;
+  width: 39%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
 }
 .mainContainer .headerMain .navContainer {
-  width: 70%;
+  width: 60%;
   display: flex;
   justify-content: flex-end;
 }
@@ -168,57 +187,90 @@ html {
   width: 70%;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   text-decoration: none;
 }
-.mainContainer .headerMain .navContainer .navSection .skipNav {
-  display: none;
+.mainContainer .headerMain .navContainer .navSection .button {
+  text-decoration: none;
+  color: black;
+  background-color: #fdfff9;
+}
+.mainContainer .headerMain .navContainer .navSection .button:link {
+  border: outset #cfdae6 2px;
+  border-radius: 8px;
+  padding: 2%;
+}
+.mainContainer .headerMain .navContainer .navSection .button:visited {
+  text-decoration: none;
+  border: outset #cfdae6 2px;
+}
+.mainContainer .headerMain .navContainer .navSection .button:hover {
+  border: outset #cfdae6 2px;
+  background-color: #fbfeff;
+}
+.mainContainer .headerMain .navContainer .navSection .button:active {
+  border: inset #cfdae6 2px;
+}
+.mainContainer .headerMain .navContainer .navSection #skipNav {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 .mainContainer .contentMain {
-  background-color: #f4fcff;
+  background-color: #fbfeff;
   padding: 1%;
-  border: solid black 1px;
+  border: outset #cfdae6 1px;
   display: flex;
   flex-direction: column;
 }
 .mainContainer .contentMain .educationMainSection {
+  background-color: hsl(197, 100%, 97%);
   padding: 1%;
-  border-top: solid black 1.5px;
-  border-left: solid black 1px;
-  border-right: solid black 1px;
+  border-top: outset #cfdae6 1.5px;
+  border-left: outset #cfdae6 1px;
+  border-right: outset #cfdae6 1px;
   border-radius: 10px;
 }
 .mainContainer .contentMain .educationMainSection .educationSchool {
-  border: ridge #e9f4ff 1px;
-  background-color: #fbfff4;
+  border: outset #cfdae6 1px;
+  background-color: #fdfff9;
   padding: 1%;
 }
 .mainContainer .contentMain .skillsMainSection {
-  display: none;
-  border-top: solid black 1.5px;
-  border-left: solid black 1px;
-  border-right: solid black 1px;
+  background-color: hsl(197, 100%, 97%);
+  border-top: outset #cfdae6 1.5px;
+  border-left: outset #cfdae6 1px;
+  border-right: outset #cfdae6 1px;
   border-radius: 10px;
-  flex-direction: column;
+  padding: 1%;
 }
 .mainContainer .contentMain .skillsMainSection .skillsComputerApplications {
   padding: 1%;
+  border: outset #cfdae6 1px;
+  background-color: #fdfff9;
 }
 .mainContainer .contentMain .skillsMainSection .skillsComputerLanguages {
   padding: 1%;
+  border: outset #cfdae6 1px;
+  background-color: #fdfff9;
 }
 .mainContainer .contentMain .workExperienceMainSection {
+  background-color: hsl(197, 100%, 97%);
   display: flex;
   padding: 1%;
-  border-top: solid black 1.5px;
-  border-left: solid black 1px;
-  border-right: solid black 1px;
+  border-top: outset #cfdae6 1.5px;
+  border-left: outset #cfdae6 1px;
+  border-right: outset #cfdae6 1px;
   border-radius: 10px;
   flex-direction: column;
 }
 .mainContainer .contentMain .workExperienceMainSection .workExperienceCompany {
   padding: 1%;
-  border: ridge #e9f4ff 1px;
-  background-color: #fbfff4;
+  border: outset #cfdae6 1px;
+  background-color: #fdfff9;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -240,25 +292,26 @@ html {
   line-height: 120%;
 }
 .mainContainer .contentMain .referencesMainSection {
+  background-color: hsl(197, 100%, 97%);
   padding: 1%;
-  border-top: solid black 1.5px;
-  border-left: solid black 1px;
-  border-right: solid black 1px;
+  border-top: outset #cfdae6 1.5px;
+  border-left: outset #cfdae6 1px;
+  border-right: outset #cfdae6 1px;
   border-radius: 10px;
-  border-bottom: solid black 1px;
+  border-bottom: solid #cfdae6 1px;
 }
 .mainContainer .contentMain .referencesMainSection .referencesPersonal {
   padding: 1%;
-  border: ridge #e9f4ff 1px;
-  background-color: #fbfff4;
+  border: outset #cfdae6 1px;
+  background-color: #fdfff9;
 }
 .mainContainer .contentMain .referencesMainSection .referencesWork {
   padding: 1%;
-  border: ridge #e9f4ff 1px;
-  background-color: #fbfff4;
+  border: outset #cfdae6 1px;
+  background-color: #fdfff9;
 }
 .mainContainer .footerMain {
   padding: 1%;
-  border: solid black 1px;
-  background-color: #f4fcff;
+  border: outset #cfdae6 1px;
+  background-color: hsl(197, 100%, 97%);
 }
