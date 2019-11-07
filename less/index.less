@@ -60,7 +60,10 @@ html, body {
 html {
 	font-size: 62.5%;
 	font-size: 1rem;
-	background-color: @themeColor3;
+	background-color: black;
+	// background-image: url(/img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg);
+	// background-size: cover;
+	// background-repeat: no-repeat;
 	h1 {
 		font-size: 2.5rem;
 		text-decoration: underline;
@@ -87,6 +90,7 @@ html {
 }
 
 
+
   /////////////////////////////
  // start variables section //
 /////////////////////////////
@@ -103,7 +107,8 @@ html {
  // start mixinx section //
 //////////////////////////
 .pad(){
-	padding: 1%
+	padding: 1%;
+	margin: 0.5% 0;
 }//end .pad()
 
 .bordertest(){
@@ -116,13 +121,13 @@ html {
 
 .sectionBorder(){
 	border-top: outset @themeColor 1.5px;
-	border-left: outset @themeColor 1px;
-	border-right: outset @themeColor 1px;
+	border-left: dashed @themeColor 0.5px;
+	border-right: dashed @themeColor 0.5px;
 	border-radius: 10px;
 }//end .sectionBorder()
 
 .mainBorder(){
-	border: outset @themeColor 1px;
+	border: outset @themeColor 0.1px;
 }//end .mainBorder()
 
 .bgRise(){
@@ -187,6 +192,10 @@ html {
 	width: 900px;
 	margin: 0 auto;
 	display: block;
+	background-color: black;
+	background-image: url(/img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 	.headerMain {
 		.bgRise();
 		.mainBorder();
@@ -195,6 +204,10 @@ html {
 		justify-content: center;
 		align-items: center;
 		flex-direction: row;
+		background-color: black;
+		background-image: url(/img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
 		.headerMainTitle{
 			width: 40%;
 			.bgRise2();
@@ -203,6 +216,7 @@ html {
 			justify-content: space-between;
 			align-items: center;
 			padding: 1% 0;
+			background-color: @themeColor2;
 			span{
 				margin:1% 0;
 			}//end span inside .headerMainTitle
@@ -244,7 +258,7 @@ html {
 			.navContainer{
 				width: 100%;
 				.navSection{
-					margin-top: 2%;
+					margin: 1% auto;
 				}
 			}
 			
@@ -254,6 +268,10 @@ html {
 
 	.contentMain{
 		background-color: @themeColor4;
+		background-color: black;
+		background-image: url(/img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
 		width: 100%;
 		.pad();
 		.mainBorder();
@@ -284,7 +302,8 @@ html {
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					.bgRise2();
+					text-decoration: underline;
+					text-align: center;
 					width: 100%;
 				}
 				.listSkills{
@@ -389,9 +408,10 @@ html {
 	}//end .contentMain
 
 	.footerMain{
+		.buttonStyle();
+		text-align: center;
 		.pad();
 		.mainBorder();
-		background-color: @themeColor3;
 		@media (max-width: 500px){
 			flex-direction: column;
 		}//end of 500px media query for .footerMain
@@ -405,4 +425,3 @@ html {
   ////////////////////////////
  // end index.html section //
 ////////////////////////////
-
