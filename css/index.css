@@ -134,3 +134,131 @@ html,
 body {
   height: 100%;
 }
+html {
+  font-size: 62.5%;
+  background-color: #fbfff4;
+}
+.mainContainer {
+  font-size: 1.6rem;
+  width: 900px;
+  margin: 0 auto;
+  display: block;
+}
+.mainContainer .headerMain {
+  background-color: #f4fcff;
+  border: solid black 1px;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.mainContainer .headerMain .headerMainTitle {
+  width: 29%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.mainContainer .headerMain .navContainer {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+.mainContainer .headerMain .navContainer .navSection {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+.mainContainer .headerMain .navContainer .navSection .skipNav {
+  display: none;
+}
+.mainContainer .contentMain {
+  background-color: #f4fcff;
+  padding: 1%;
+  border: solid black 1px;
+  display: flex;
+  flex-direction: column;
+}
+.mainContainer .contentMain .educationMainSection {
+  padding: 1%;
+  border-top: solid black 1.5px;
+  border-left: solid black 1px;
+  border-right: solid black 1px;
+  border-radius: 10px;
+}
+.mainContainer .contentMain .educationMainSection .educationSchool {
+  border: ridge #e9f4ff 1px;
+  background-color: #fbfff4;
+  padding: 1%;
+}
+.mainContainer .contentMain .skillsMainSection {
+  display: none;
+  border-top: solid black 1.5px;
+  border-left: solid black 1px;
+  border-right: solid black 1px;
+  border-radius: 10px;
+  flex-direction: column;
+}
+.mainContainer .contentMain .skillsMainSection .skillsComputerApplications {
+  padding: 1%;
+}
+.mainContainer .contentMain .skillsMainSection .skillsComputerLanguages {
+  padding: 1%;
+}
+.mainContainer .contentMain .workExperienceMainSection {
+  display: flex;
+  padding: 1%;
+  border-top: solid black 1.5px;
+  border-left: solid black 1px;
+  border-right: solid black 1px;
+  border-radius: 10px;
+  flex-direction: column;
+}
+.mainContainer .contentMain .workExperienceMainSection .workExperienceCompany {
+  padding: 1%;
+  border: ridge #e9f4ff 1px;
+  background-color: #fbfff4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mainContainer .contentMain .workExperienceMainSection .workExperienceCompany .workExperienceCompanyHeader {
+  display: flex;
+  flex-direction: column;
+}
+.mainContainer .contentMain .workExperienceMainSection .workExperienceCompany .workExperienceCompanyHeader .workExperienceCompanyHeaderPositionDates {
+  display: flex;
+  justify-content: space-between;
+}
+.mainContainer .contentMain .workExperienceMainSection .workExperienceCompany .workExperienceCompanyHeader .workExperienceCompanyHeaderNameLocation {
+  display: flex;
+  justify-content: space-between;
+}
+.mainContainer .contentMain .workExperienceMainSection .workExperienceCompany .workExperienceCompanyJobdescription {
+  margin: 1% 0;
+  line-height: 120%;
+}
+.mainContainer .contentMain .referencesMainSection {
+  padding: 1%;
+  border-top: solid black 1.5px;
+  border-left: solid black 1px;
+  border-right: solid black 1px;
+  border-radius: 10px;
+  border-bottom: solid black 1px;
+}
+.mainContainer .contentMain .referencesMainSection .referencesPersonal {
+  padding: 1%;
+  border: ridge #e9f4ff 1px;
+  background-color: #fbfff4;
+}
+.mainContainer .contentMain .referencesMainSection .referencesWork {
+  padding: 1%;
+  border: ridge #e9f4ff 1px;
+  background-color: #fbfff4;
+}
+.mainContainer .footerMain {
+  padding: 1%;
+  border: solid black 1px;
+  background-color: #f4fcff;
+}

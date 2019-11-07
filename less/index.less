@@ -50,11 +50,180 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
+
+html {
+	font-size: 62.5%;
+	background-color: @themeColor2;
+}
+
+//start of variables
+@themeColor: rgb(233, 244, 255);
+@themeColor2: rgb(251, 255, 244);
+@themeColor3: #f4fcff;
+//end variables section
+
+//start of mixins section
+.pad(){
+	padding: 1%
+}
+
+.bordertest(){
+	border: solid red 1px;
+}
+
+.bordertest2(){
+	border: solid blue 1px;
+}
+
+.sectionBorder(){
+	border-top: solid black 1.5px;
+	border-left: solid black 1px;
+	border-right: solid black 1px;
+	border-radius: 10px;
+}
+
+.mainBorder(){
+	border: solid black 1px;
+}
+
+.bgRise(){
+	border: ridge @themeColor 1px;
+	background-color: @themeColor2;
+}
+//end mixins section
+
+.mainContainer {
+	font-size: 1.6rem;
+	width: 900px;
+	margin: 0 auto;
+	display: block;
+	.headerMain {
+		background-color: @themeColor3;
+		.mainBorder();
+		.pad();
+		display:flex;
+		justify-content: center;
+		flex-direction: row;
+		.headerMainTitle{
+			width: 29%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+		}//end .headerMainTitle
+
+		.navContainer{
+			width: 70%;
+			display: flex;
+			justify-content: flex-end;
+			.navSection{
+				width: 70%;
+				display: flex;
+				justify-content: space-evenly;
+				text-decoration: none;
+				.skipNav{
+					display:none;
+				}//end .skipnav section. displays none for screen reader accessibility only
+			}//end .navSection
+
+		}//end .navContainer
+
+	}//end .headerMain
+
+	.contentMain{
+		background-color: @themeColor3;
+		.pad();
+		.mainBorder();
+		display: flex;
+		flex-direction: column;
+		.educationMainSection{
+			.pad();
+			.sectionBorder();
+			.educationSchool{
+				.bgRise();
+				.pad();
+			}//end .educationSchool
+
+		}//end .educationmainSection
+
+		.skillsMainSection{
+			display: none;
+			.sectionBorder();
+			// display: flex;
+			flex-direction: column;
+			.skillsComputerApplications{
+				.pad();
+			}//end .skillsComputerApplications
+
+			.skillsComputerLanguages{
+				.pad();
+			}//end .skillsComputerLanguages
+
+		}//end .skillsMainSection
+
+		.workExperienceMainSection{
+			display: flex;
+			.pad();
+			.sectionBorder();
+			flex-direction: column;
+			.workExperienceCompany{
+				.pad();
+				.bgRise();
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				.workExperienceCompanyHeader{
+					display: flex;
+					flex-direction: column;
+					.workExperienceCompanyHeaderPositionDates{
+						display: flex;
+						justify-content: space-between;
+					}//end .workExperienceCompanyHeaderPositionDates
+
+					.workExperienceCompanyHeaderNameLocation{
+						display: flex;
+						justify-content: space-between;
+					}//end .workExperienceCompanyHeaderNameLocation
+
+				}//end .workExperienceCompanyHeader
+
+				.workExperienceCompanyJobdescription{
+					margin: 1% 0;
+					line-height: 120%;
+				}
+
+			}//end .workExperienceDevry
+
+		}//end .workExperienceMainSection
+
+		.referencesMainSection{
+			.pad();
+			.sectionBorder();
+			border-bottom: solid black 1px;
+			.referencesPersonal{
+				.pad();
+				.bgRise();
+			}
+			.referencesWork{
+				.pad();
+				.bgRise();
+			}
+
+		}
+
+	}//end .contentMain
+
+	.footerMain{
+		.pad();
+		.mainBorder();
+		background-color: @themeColor3;
+	}
+}//end .mainContainer
 
 
