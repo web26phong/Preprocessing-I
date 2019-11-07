@@ -140,17 +140,21 @@ html {
   background-color: hsl(197, 100%, 97%);
 }
 html h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-decoration: underline;
+  font-weight: bold;
 }
 html h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 html h3 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 html h4 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 html h5 {
   font-size: 1.2rem;
@@ -164,41 +168,58 @@ html h6 {
   display: block;
 }
 .mainContainer .headerMain {
-  background-color: hsl(197, 100%, 97%);
+  background-color: #fdfff9;
   border: outset #cfdae6 1px;
   padding: 1%;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
 }
 .mainContainer .headerMain .headerMainTitle {
-  width: 39%;
+  width: 40%;
+  border: outset #cfdae6 1px;
+  background-color: #fbfeff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 0;
+}
+.mainContainer .headerMain .headerMainTitle span {
+  margin: 1% 0;
 }
 .mainContainer .headerMain .navContainer {
   width: 60%;
+  padding: 1%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-content: center;
 }
 .mainContainer .headerMain .navContainer .navSection {
-  width: 70%;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   text-decoration: none;
 }
 .mainContainer .headerMain .navContainer .navSection .button {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: black;
-  background-color: #fdfff9;
+  background-color: #fbfeff;
+  border-radius: 8px;
+}
+.mainContainer .headerMain .navContainer .navSection .button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .mainContainer .headerMain .navContainer .navSection .button:link {
   border: outset #cfdae6 2px;
-  border-radius: 8px;
-  padding: 2%;
 }
 .mainContainer .headerMain .navContainer .navSection .button:visited {
   text-decoration: none;
@@ -206,21 +227,39 @@ html h6 {
 }
 .mainContainer .headerMain .navContainer .navSection .button:hover {
   border: outset #cfdae6 2px;
-  background-color: #fbfeff;
+  background-color: hsl(197, 100%, 97%);
 }
 .mainContainer .headerMain .navContainer .navSection .button:active {
   border: inset #cfdae6 2px;
 }
+@media (max-width: 500px) {
+  .mainContainer .headerMain .navContainer .navSection .button {
+    padding: 15px;
+  }
+}
 .mainContainer .headerMain .navContainer .navSection #skipNav {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+  display: none;
+}
+@media (max-width: 500px) {
+  .mainContainer .headerMain {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .mainContainer .headerMain .headerMainTitle {
+    width: 100%;
+    align-items: center;
+    padding: 3%;
+  }
+  .mainContainer .headerMain .navContainer {
+    width: 100%;
+  }
+  .mainContainer .headerMain .navContainer .navSection {
+    margin-top: 2%;
+  }
 }
 .mainContainer .contentMain {
   background-color: #fbfeff;
+  width: 100%;
   padding: 1%;
   border: outset #cfdae6 1px;
   display: flex;
@@ -245,17 +284,26 @@ html h6 {
   border-left: outset #cfdae6 1px;
   border-right: outset #cfdae6 1px;
   border-radius: 10px;
+  width: 100%;
   padding: 1%;
 }
-.mainContainer .contentMain .skillsMainSection .skillsComputerApplications {
+.mainContainer .contentMain .skillsMainSection .skillsComputerBoth {
   padding: 1%;
   border: outset #cfdae6 1px;
   background-color: #fdfff9;
+  display: flex;
+  flex-direction: column;
 }
-.mainContainer .contentMain .skillsMainSection .skillsComputerLanguages {
-  padding: 1%;
+.mainContainer .contentMain .skillsMainSection .skillsComputerBoth .spanComputersRise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: outset #cfdae6 1px;
-  background-color: #fdfff9;
+  background-color: #fbfeff;
+  width: 100%;
+}
+.mainContainer .contentMain .skillsMainSection .skillsComputerBoth .listSkills {
+  line-height: 120%;
 }
 .mainContainer .contentMain .workExperienceMainSection {
   background-color: hsl(197, 100%, 97%);
@@ -278,6 +326,9 @@ html h6 {
 .mainContainer .contentMain .workExperienceMainSection .workExperienceCompany .workExperienceCompanyHeader {
   display: flex;
   flex-direction: column;
+  padding: 1%;
+  border: outset #cfdae6 1px;
+  background-color: #fbfeff;
 }
 .mainContainer .contentMain .workExperienceMainSection .workExperienceCompany .workExperienceCompanyHeader .workExperienceCompanyHeaderPositionDates {
   display: flex;
@@ -289,7 +340,8 @@ html h6 {
 }
 .mainContainer .contentMain .workExperienceMainSection .workExperienceCompany .workExperienceCompanyJobdescription {
   margin: 1% 0;
-  line-height: 120%;
+  line-height: 150%;
+  padding: 1%;
 }
 .mainContainer .contentMain .referencesMainSection {
   background-color: hsl(197, 100%, 97%);
@@ -300,18 +352,49 @@ html h6 {
   border-radius: 10px;
   border-bottom: solid #cfdae6 1px;
 }
-.mainContainer .contentMain .referencesMainSection .referencesPersonal {
+.mainContainer .contentMain .referencesMainSection .referencesAll {
   padding: 1%;
   border: outset #cfdae6 1px;
   background-color: #fdfff9;
 }
-.mainContainer .contentMain .referencesMainSection .referencesWork {
-  padding: 1%;
-  border: outset #cfdae6 1px;
-  background-color: #fdfff9;
+.mainContainer .contentMain .referencesMainSection .referencesAll .referencesSpanTitle {
+  text-decoration: underline;
+  text-align: center;
+}
+.mainContainer .contentMain .referencesMainSection .referencesAll li {
+  background-color: #fbfeff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mainContainer .contentMain .referencesMainSection .referencesAll li:nth-child(odd) {
+  background-color: hsl(197, 100%, 97%);
+  border: dashed 1px #cfdae6;
+}
+.mainContainer .contentMain .referencesMainSection .referencesAll * {
+  line-height: 150%;
+}
+.mainContainer .contentMain .referencesMainSection .referencesAll .referenceName,
+.mainContainer .contentMain .referencesMainSection .referencesAll .referenceNumber {
+  padding: 0 1%;
+}
+@media (max-width: 500px) {
+  .mainContainer .contentMain {
+    flex-direction: column;
+  }
 }
 .mainContainer .footerMain {
   padding: 1%;
   border: outset #cfdae6 1px;
   background-color: hsl(197, 100%, 97%);
+}
+@media (max-width: 500px) {
+  .mainContainer .footerMain {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .mainContainer {
+    width: 500px;
+  }
 }

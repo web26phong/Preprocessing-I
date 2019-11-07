@@ -62,17 +62,21 @@ html {
 	font-size: 1rem;
 	background-color: @themeColor3;
 	h1 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		text-decoration: underline;
+		font-weight: bold;
 	}
 	h2 {
-		font-size: 1.8rem;
+		font-size: 1.5rem;
+		font-weight: bold;
 	}
 	h3 {
-		font-size: 1.6rem;
+		font-size: 1.4rem;
+		font-weight: bold;
 	}
 	h4 {
-		font-size: 1.4rem;
+		font-size: 1.3rem;
+		font-weight: bold;
 	}
 	h5 {
 		font-size: 1.2rem;
@@ -82,115 +86,175 @@ html {
 	}
 }
 
-//start of variables
+
+  /////////////////////////////
+ // start variables section //
+/////////////////////////////
 @themeColor: rgb(207, 218, 230);
 @themeColor2: rgb(253, 255, 249);
 @themeColor3: hsl(197, 100%, 97%);
 @themeColor4: rgb(251, 254, 255);
-//end variables section
+  ///////////////////////////
+ // end variables section //
+///////////////////////////
 
-//start of mixins section
+
+  //////////////////////////
+ // start mixinx section //
+//////////////////////////
 .pad(){
 	padding: 1%
-}
+}//end .pad()
 
 .bordertest(){
 	border: solid red 1px;
-}
+}//end .bordertest()
 
 .bordertest2(){
 	border: solid blue 1px;
-}
+}//end .bordertest2()
 
 .sectionBorder(){
 	border-top: outset @themeColor 1.5px;
 	border-left: outset @themeColor 1px;
 	border-right: outset @themeColor 1px;
 	border-radius: 10px;
-}
+}//end .sectionBorder()
 
 .mainBorder(){
 	border: outset @themeColor 1px;
-}
+}//end .mainBorder()
 
 .bgRise(){
 	border: outset @themeColor 1px;
 	background-color: @themeColor2;
-}
+}//end .bgRise()
+
+.bgRise2(){
+	border: outset @themeColor 1px;
+	background-color: @themeColor4;
+}//end .bgRise2()
 
 .buttonStyle(){
 	.button{
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		text-decoration: none;
 		color: black;
-		background-color: @themeColor2;
-	}
+		background-color: @themeColor4;
+		border-radius: 8px;
+		span{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}//end .button{
 	.button:link{
 		border: outset @themeColor 2px;
-		border-radius: 8px;
-		padding: 2%;
-	}
+		
+	}//end .button:link{
 	.button:visited{
 		text-decoration: none;
 		border: outset @themeColor 2px;
-	}
+	}//end .button:visited{
 
 	.button:hover{
 		border: outset @themeColor 2px;
-		background-color: @themeColor4;
-	}
+		background-color: @themeColor3;
+	}//end .button:hover{
 	.button:active{
 		border: inset @themeColor 2px;
+	}//end .button:active{
+
+	@media (max-width: 500px){
+		.button{
+			padding: 15px;
+		}
 	}
-}
+}//end .buttonStyle()
 
-//end mixins section
+  ////////////////////////
+ // end mixins section //
+////////////////////////
 
+
+  //////////////////////////////
+ // start index.html section //
+//////////////////////////////
 .mainContainer {
 	width: 900px;
 	margin: 0 auto;
 	display: block;
 	.headerMain {
-		background-color: @themeColor3;
+		.bgRise();
 		.mainBorder();
 		.pad();
 		display:flex;
 		justify-content: center;
+		align-items: center;
 		flex-direction: row;
 		.headerMainTitle{
-			width: 39%;
+			width: 40%;
+			.bgRise2();
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
-			align-content: center;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1% 0;
+			span{
+				margin:1% 0;
+			}//end span inside .headerMainTitle
 		}//end .headerMainTitle
 
 		.navContainer{
 			width: 60%;
+			.pad();
 			display: flex;
-			justify-content: flex-end;
+			justify-content: center;
+			align-content: center;
 			.navSection{
+				width: 100%;
 				.buttonStyle();
-				width: 70%;
 				display: flex;
 				justify-content: space-evenly;
 				align-items: center;
 				text-decoration: none;
 				#skipNav{
-						position: absolute;
-						left:-10000px;
-						top: auto;
-						width: 1px;
-						height: 1px;
-						overflow: hidden;
+						display: none;
+						// position: absolute;
+						// left:-10000px;
+						// top: auto;
+						// width: 1px;
+						// height: 1px;
+						// overflow: hidden;
 				}//end #skipnav... displays none for screen reader accessibility only
 			}//end .navSection
 
 		}//end .navContainer
+		@media (max-width: 500px){
+			width: 100%;
+			flex-direction: column-reverse;
+			.headerMainTitle{
+				width: 100%;
+				align-items: center;
+				padding: 3%;
+			}
+			.navContainer{
+				width: 100%;
+				.navSection{
+					margin-top: 2%;
+				}
+			}
+			
+		}//end of 500px media query for .headerMain
 
 	}//end .headerMain
 
 	.contentMain{
 		background-color: @themeColor4;
+		width: 100%;
 		.pad();
 		.mainBorder();
 		display: flex;
@@ -209,15 +273,33 @@ html {
 		.skillsMainSection{
 			background-color: @themeColor3;
 			.sectionBorder();
+			width: 100%;
 			.pad();
-			.skillsComputerApplications{
+			.skillsComputerBoth{
 				.pad();
 				.bgRise();
-			}//end .skillsComputerApplications
-			.skillsComputerLanguages{
-				.pad();
-				.bgRise();
-			}//end .skillsComputerLanguages
+				display: flex;
+				flex-direction: column;
+				.spanComputersRise{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					.bgRise2();
+					width: 100%;
+				}
+				.listSkills{
+					line-height: 120%;
+				}
+			}//end .skillsComputerBoth
+			
+			// .skillsComputerApplications{
+			// 	.pad();
+			// 	.bgRise();
+			// }//end .skillsComputerApplications
+			// .skillsComputerLanguages{
+			// 	.pad();
+			// 	.bgRise();
+			// }//end .skillsComputerLanguages
 
 		}//end .skillsMainSection
 
@@ -236,6 +318,8 @@ html {
 				.workExperienceCompanyHeader{
 					display: flex;
 					flex-direction: column;
+					.pad();
+					.bgRise2();
 					.workExperienceCompanyHeaderPositionDates{
 						display: flex;
 						justify-content: space-between;
@@ -250,7 +334,8 @@ html {
 
 				.workExperienceCompanyJobdescription{
 					margin: 1% 0;
-					line-height: 120%;
+					line-height: 150%;
+					.pad();
 				}
 
 			}//end .workExperienceDevry
@@ -262,16 +347,44 @@ html {
 			.pad();
 			.sectionBorder();
 			border-bottom: solid @themeColor 1px;
-			.referencesPersonal{
+			.referencesAll {
 				.pad();
 				.bgRise();
+				.referencesSpanTitle{
+					text-decoration: underline;
+					text-align: center;
+				}
+				li{
+					background-color: @themeColor4;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+				}
+				li:nth-child(odd) {
+					background-color: @themeColor3;
+					border: dashed 1px @themeColor;
+				}
+				*{
+					line-height: 150%;
+				}
+				.referenceName, .referenceNumber{
+					padding: 0 1%;
+				}
 			}
-			.referencesWork{
-				.pad();
-				.bgRise();
-			}
-
 		}
+		@media (max-width: 500px){
+			flex-direction: column;
+			// .referencesAll{
+			// 	// li{
+			// 	// 	display: flex;
+			// 	// 	flex-direction: row;
+			// 	// 	justify-content: space-between;
+			// 	// }
+			// 	// .referenceName:nth-child(odd), .referenceNumber:nth-child(odd){
+			// 	// 	background-color: @themeColor4;
+			// 	// }
+			// }
+		}//end of 500px media query for .contentMain
 
 	}//end .contentMain
 
@@ -279,7 +392,17 @@ html {
 		.pad();
 		.mainBorder();
 		background-color: @themeColor3;
+		@media (max-width: 500px){
+			flex-direction: column;
+		}//end of 500px media query for .footerMain
+	}//end .footerMain
+
+	@media (max-width: 500px){
+		width: 500px;
 	}
 }//end .mainContainer
 
+  ////////////////////////////
+ // end index.html section //
+////////////////////////////
 
