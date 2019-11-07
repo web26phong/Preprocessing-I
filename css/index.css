@@ -137,7 +137,8 @@ body {
 html {
   font-size: 62.5%;
   font-size: 1rem;
-  background-color: black;
+  background-color: hsl(197, 100%, 97%);
+  background-image: url("/img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg");
 }
 html h1 {
   font-size: 2.5rem;
@@ -166,14 +167,13 @@ html h6 {
   width: 900px;
   margin: 0 auto;
   display: block;
-  background-color: black;
-  background-image: url(/img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg);
+  background-color: hsl(197, 100%, 97%);
+  background-image: url("/asdf.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .mainContainer .headerMain {
   border: outset #cfdae6 1px;
-  background-color: #fdfff9;
   border: outset #cfdae6 0.1px;
   padding: 1%;
   margin: 0.5% 0;
@@ -181,21 +181,20 @@ html h6 {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: black;
-  background-image: url(/img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg);
+  background-color: #fdfff9;
+  background-image: url("/asdf.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .mainContainer .headerMain .headerMainTitle {
   width: 40%;
   border: outset #cfdae6 1px;
-  background-color: #fbfeff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 1% 0;
-  background-color: #fdfff9;
+  background-color: #fbfeff;
 }
 .mainContainer .headerMain .headerMainTitle span {
   margin: 1% 0;
@@ -271,8 +270,8 @@ html h6 {
 }
 .mainContainer .contentMain {
   background-color: #fbfeff;
-  background-color: black;
-  background-image: url(/img/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg);
+  background-color: #fdfff9;
+  background-image: url("/asdf.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
